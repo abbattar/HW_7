@@ -1,4 +1,4 @@
-import csv_action as ca
+import db_action as dba
 import sys
 
 
@@ -13,16 +13,22 @@ def menu():
         '\t5. Закрыть программу\n'
         f'{"*" * 50}\n'
         '\tВведите номер действия и нажмите Enter: '))
-
+    # match choise:
+    #    case '1': 
     if choice == '1':
-        ca.view_csv()
+        dba.view_csv()
+        # case '2':
     elif choice == '2':
-        ca.generate_fake_contact()
+        dba.generate_fake_contact()
+        # case '3':
     elif choice == '3':
-        ca.add_new_contact()
+        dba.add_new_contact()
+        # case '4':
     elif choice == '4':
-        ca.delete_all()
+        dba.delete_all()
+        # case '5':
     elif choice == '5':
         sys.exit('Программа закрыта. Всего доброго!')
+        # case _:
     else:
         print('Что-то пошло не так. Повторите ввод!')
